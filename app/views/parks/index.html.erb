@@ -1,0 +1,19 @@
+<h1>Parks</h1>
+
+<section class="parks">
+  <p>Total Number of Parks Found: <%= @parks.count %></p>
+  <% @parks.each do |park| %>
+    Park Name: <%= park.name %><br>
+    Description: <%= park.description %><br>
+    Direction Info: <%= park.directions %><br>
+    Hours of Operation:<br>
+    Monday: <%= park.hours['monday'] %><br>
+    Tuesday: <%= park.hours['tuesday'] %><br>
+    Wednesday: <%= park.hours['wednesday'] %><br>
+    Thursday: <%= park.hours['thursday'] %><br>
+    Friday: <%= park.hours['friday'] %><br>
+    Saturday: <%= park.hours['saturday'] %><br>
+    Sunday: <%= park.hours['sunday'] %><br>
+    <br>
+  <% end %>
+</section>
